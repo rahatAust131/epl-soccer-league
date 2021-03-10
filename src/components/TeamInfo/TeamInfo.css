@@ -1,0 +1,9 @@
+.teamInfo-card img{
+    width: 65%;
+    margin: auto;
+}
+.teamInfo-card {
+    border: 1px solid red;
+    width: 90%;
+    margin: auto;
+}
