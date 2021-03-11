@@ -16,9 +16,10 @@ const TeamInfo = () => {
         .then(data => setTeamInfo(data.teams[0]));
     }, [url]);
 
-
-    const { strTeamBanner, strDescriptionEN, intFormedYear, strGender, strTeam,
-        strSport, strTeamBadge, strCountry } = teamInfo;
+    const { strTeamBanner, strDescriptionEN, strDescriptionES, intFormedYear, strGender, strTeam,
+        strSport, strTeamBadge, strCountry, strFacebook, strInstagram, strYoutube, strTwitter } = teamInfo;
+    
+    
 
     return (
         <div>
@@ -39,19 +40,19 @@ const TeamInfo = () => {
             </div>
             <div className="container team-info-container p-3 mb-3">
                 <p className="description-para"><small>{strDescriptionEN}</small></p>
-                <p className="description-para"><small>{strDescriptionEN}</small></p>
+                <p className="description-para"><small>{strDescriptionES}</small></p>
                 <div className="d-flex justify-content-center">
                     <h2 className="icons">    
-                        <FontAwesomeIcon icon = {faFacebook} />
+                        <a href={strFacebook}><FontAwesomeIcon icon = {faFacebook} /></a>
                     </h2>
                     <h2 className="icons">
-                        <FontAwesomeIcon icon = {faTwitter} />
+                        <a href={strTwitter}><FontAwesomeIcon icon = {faTwitter} /></a>
                     </h2>
                     <h2 className="icons">
-                        <FontAwesomeIcon icon = {faInstagram} />
+                        <a href={strInstagram}><FontAwesomeIcon icon = {faInstagram} /></a>
                     </h2>
                     <h2 className="icons">
-                        <FontAwesomeIcon icon = {faYoutube} />
+                        <a href={strYoutube}><FontAwesomeIcon icon = {faYoutube} /></a>
                     </h2>
                 </div>
             </div>
