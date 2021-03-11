@@ -4,9 +4,13 @@
 .banner-img {
     width: 100%;
 }
-.team-badge-img {
-    width: 45%;
+.team-info {
+    width: 100%;
+}
+.team-player-img {
+    width: 75%;
     margin: auto;
+    padding: 5px;
 }
 .icons {
     cursor: pointer;

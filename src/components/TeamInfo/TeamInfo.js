@@ -4,6 +4,8 @@ import { faCalendarPlus, faFlag, faFutbol, faMars } from '@fortawesome/free-soli
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./TeamInfo.css";
 import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import maleImg from "../../../src/male.png"
+import femaleImg from "../../../src/female.png";
 
 const TeamInfo = () => {
     const { teamId } = useParams();
@@ -17,15 +19,14 @@ const TeamInfo = () => {
     }, [url]);
 
     const { strTeamBanner, strDescriptionEN, strDescriptionES, intFormedYear, strGender, strTeam,
-        strSport, strTeamBadge, strCountry, strFacebook, strInstagram, strYoutube, strTwitter } = teamInfo;
-    
-    
+        strSport, strCountry, strFacebook, strInstagram, strYoutube, strTwitter } = teamInfo;
+
 
     return (
         <div>
             <img className="banner-img" src={strTeamBanner} alt="Team Banner"/>
-            <div className="mt-3 d-flex justify-content-center align-items-space-center container team-info-container">  
-                <div className="mb-3">
+            <div className="mt-3 d-flex justify-content-center align-items-center container team-info-container">  
+                <div className="mb-3 team-info">
                     <div className="card-body">
                         <h2 className="card-title">{strTeam}</h2>
                         <p className="card-text"> <FontAwesomeIcon icon = {faCalendarPlus} /> Founded : {intFormedYear}</p>
@@ -35,7 +36,11 @@ const TeamInfo = () => {
                     </div>
                 </div>
                 <div>
-                    <img className="team-badge-img" src={strTeamBadge} alt=""/>
+                    {
+                        strGender === "Male" 
+                        ? <img className="team-player-img" src={maleImg} alt=""/> 
+                        : <img className="team-player-img" src={femaleImg} alt=""/>
+                    }
                 </div>
             </div>
             <div className="container team-info-container p-3 mb-3">
@@ -43,16 +48,16 @@ const TeamInfo = () => {
                 <p className="description-para"><small>{strDescriptionES}</small></p>
                 <div className="d-flex justify-content-center">
                     <h2 className="icons">    
-                        <a href={strFacebook}><FontAwesomeIcon icon = {faFacebook} /></a>
+                        <a href={`https://${strFacebook}`}><FontAwesomeIcon icon = {faFacebook} /></a>
                     </h2>
                     <h2 className="icons">
-                        <a href={strTwitter}><FontAwesomeIcon icon = {faTwitter} /></a>
+                        <a href={`https://${strTwitter}`}><FontAwesomeIcon icon = {faTwitter} /></a>
                     </h2>
                     <h2 className="icons">
-                        <a href={strInstagram}><FontAwesomeIcon icon = {faInstagram} /></a>
+                        <a href={`https://${strInstagram}`}><FontAwesomeIcon icon = {faInstagram} /></a>
                     </h2>
                     <h2 className="icons">
-                        <a href={strYoutube}><FontAwesomeIcon icon = {faYoutube} /></a>
+                        <a href={`https://${strYoutube}`}><FontAwesomeIcon icon = {faYoutube} /></a>
                     </h2>
                 </div>
             </div>
