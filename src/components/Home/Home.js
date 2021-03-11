@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Teams from '../Teams/Teams';
+import "./Home.css";
 
 const Home = () => {
     const [teams, setTeams] = useState([]);
@@ -11,11 +12,11 @@ const Home = () => {
     }, []);
     
     return (
-        <div>
+        <div className="row main-team-container">
             <Header></Header>
             {
                 teams.map(team => <Teams team={team}></Teams>)
-            }          
+            }         
         </div>
     );
 };

@@ -10,14 +10,14 @@ const Teams = (props) => {
 
     return (
         <div className="teams-container">
-            <div className="card team-card">
+            <div className="card team-card col-md">
                 <img className="card-top" src={strTeamBadge} alt="Team Badge"/>
                 <div className="card-body text-center">
                     <h2 className="card-title">{strTeam}</h2>
                     <p className="card-text">Sports Type : {strSport}</p>
                     <Link to={`/team/${idTeam}`}>
                         <button className="btn btn-primary">
-                        Explore<FontAwesomeIcon icon={faArrowCircleRight} />
+                        Explore <FontAwesomeIcon icon = {faArrowCircleRight} />
                         </button>
                     </Link>
                 </div>

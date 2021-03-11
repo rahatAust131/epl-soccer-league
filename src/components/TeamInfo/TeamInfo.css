@@ -1,9 +1,19 @@
-.teamInfo-card img{
-    width: 65%;
+.team-info-container {
+    background-image: linear-gradient(180deg, lightblue, greenyellow);
+}
+.banner-img {
+    width: 100%;
+}
+.team-badge-img {
+    width: 45%;
     margin: auto;
 }
-.teamInfo-card {
-    border: 1px solid red;
-    width: 90%;
-    margin: auto;
+.icons {
+    cursor: pointer;
+    margin: 0 10px 14px 10px;
+    padding: 0 7px;
+}
+.description-para {
+    padding: 10px;
+    text-align: justify;
 }
