@@ -18,9 +18,8 @@ const TeamInfo = () => {
         .then(data => setTeamInfo(data.teams[0]));
     }, [url]);
 
-    const { strTeamBanner, strDescriptionEN, strDescriptionES, intFormedYear, strGender, strTeam,
+    const { strTeamBanner, strDescriptionEN, strDescriptionES, intFormedYear,   strGender, strTeam,
         strSport, strCountry, strFacebook, strInstagram, strYoutube, strTwitter } = teamInfo;
-
 
     return (
         <div>
